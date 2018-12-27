@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4830926607327248}
   - component: {fileID: 33870566984028336}
   - component: {fileID: 23678311044090378}
-  - component: {fileID: 64058399844520158}
   m_Layer: 0
   m_Name: apple_b
   m_TagString: Untagged
@@ -37,7 +36,7 @@ Transform:
   m_GameObject: {fileID: 1550185867689336}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.3600256, y: 0, z: -0.017727451}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,18 +82,4 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1550185867689336}
-  m_Mesh: {fileID: 4300002, guid: 467782594e0802649a181f09d21e6923, type: 3}
---- !u!64 &64058399844520158
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1550185867689336}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: 467782594e0802649a181f09d21e6923, type: 3}

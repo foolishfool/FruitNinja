@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4174773179156436}
   - component: {fileID: 33347758891662770}
   - component: {fileID: 23016785329677232}
-  - component: {fileID: 64257814071188702}
+  - component: {fileID: 135410633935596236}
   m_Layer: 0
   m_Name: watermelon_d
   m_TagString: Untagged
@@ -37,7 +37,7 @@ Transform:
   m_GameObject: {fileID: 1866083522021550}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.2454889, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1.0488254}
+  m_LocalScale: {x: 2.54, y: 2.54, z: 2.54}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -84,8 +84,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1866083522021550}
   m_Mesh: {fileID: 4300006, guid: 22adc2a9d7f5bad44b4da97250284c25, type: 3}
---- !u!64 &64257814071188702
-MeshCollider:
+--- !u!135 &135410633935596236
+SphereCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -93,8 +93,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300006, guid: 22adc2a9d7f5bad44b4da97250284c25, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.40580097
+  m_Center: {x: 0.07754169, y: -0.2029005, z: 0}
