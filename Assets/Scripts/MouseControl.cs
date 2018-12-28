@@ -10,6 +10,9 @@ public class MouseControl : MonoBehaviour {
     //line render
     [SerializeField]
     private LineRenderer lineRenderer;
+    // the sound of trail
+    public AudioSource audio_trail;
+
 
     //whether the first push
     private bool isFirstMouseDown = false;
@@ -30,6 +33,7 @@ public class MouseControl : MonoBehaviour {
         {
             isFirstMouseDown = true;
             isMouseDown = true;
+            this.audio_trail.Play();
         }
 
         if (Input.GetMouseButtonUp(0))
@@ -60,6 +64,8 @@ public class MouseControl : MonoBehaviour {
             {
                 savePosition(head);
                 posCount++;
+                //emit a ray
+                onRayCast(head);
             }
 
             last = head;
@@ -99,6 +105,19 @@ public class MouseControl : MonoBehaviour {
                 positions[i] = positions[i+1];
             }
             positions[9] = pos;
+        }
+    }
+
+    private void onRayCast(Vector3 worldpos)
+    {
+        Vector3 screenPos = Camera.main.WorldToScreenPoint(worldpos);
+
+        Ray ray = Camera.main.ScreenPointToRay(screenPos);
+        RaycastHit[] hits = Physics.RaycastAll(ray);
+
+        for (int i = 0; i < hits.Length; i++)
+        {
+            hits[i].collider.gameObject.SendMessage("onCut", SendMessageOptions.DontRequireReceiver);
         }
     }
 }

@@ -11,7 +11,8 @@ public class Spawner : MonoBehaviour {
     public GameObject[] Fruits;
     [Header("Bomb")]
     public GameObject Bomb;
-   
+    // the sound of fruit generation
+    public AudioSource audio_fruit_launch;
     //the interval time of generating fruits;
     float spawnerTime = 3.0f;
     float currentTime = 0.0f;
@@ -37,14 +38,14 @@ public class Spawner : MonoBehaviour {
             //generate Fruits
             for (int i = 0; i < fruitCount; i++)
             {
-                onSpawner(true);
+                onSpawn(true);
             }
 
             int bombNum = Random.Range(0, 100);
             // the percentage of generaging bomb
             if (bombNum > 70)
             {
-                onSpawner(false);
+                onSpawn(false);
             }
  
             currentTime = 0.0f;
@@ -54,8 +55,9 @@ public class Spawner : MonoBehaviour {
     /// <summary>
     /// generate fruits and bomb
     /// </summary>
-    void onSpawner(bool isFruit)
+    void onSpawn(bool isFruit)
     {
+        this.audio_fruit_launch.Play();
         //range of x axis 8.2 ~ -8.2
         //range of y transform.pos.y
 
