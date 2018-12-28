@@ -117,7 +117,7 @@ public class MouseControl : MonoBehaviour {
 
         for (int i = 0; i < hits.Length; i++)
         {
-            hits[i].collider.gameObject.SendMessage("onCut", SendMessageOptions.DontRequireReceiver);
+            hits[i].collider.gameObject.SendMessage("OnCut", SendMessageOptions.DontRequireReceiver);
         }
     }
 }
