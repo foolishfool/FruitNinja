@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class UIScore : MonoBehaviour {
 
     /// <summary>
@@ -30,5 +30,13 @@ public class UIScore : MonoBehaviour {
     {
         score -= reduceScore;
         txtScore.text = this.score.ToString();
+
+        if (score < 0)
+        {
+            SceneManager.LoadScene(2);
+            return;
+        }
     }
 }
+
+
