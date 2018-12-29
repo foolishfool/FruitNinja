@@ -29,6 +29,8 @@ public class ObjectControl : MonoBehaviour {
             Instantiate<GameObject>(splash_effect, transform.position, Quaternion.identity);
             //stop boom sound
             GetComponent<AudioSource>().Stop();
+            //reduce store
+            UIScore.Instance.Reduce(10);
         }
         else
         {
@@ -40,6 +42,8 @@ public class ObjectControl : MonoBehaviour {
             //generate effects
             Instantiate<GameObject>(splash_effect, transform.position, Quaternion.identity);
             Instantiate<GameObject>(splash_flat_effect, transform.position, Quaternion.identity);
+            //add score
+            UIScore.Instance.Add(5);
         }
 
         //destory current ojbects
