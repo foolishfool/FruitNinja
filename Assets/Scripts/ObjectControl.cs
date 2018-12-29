@@ -13,6 +13,8 @@ public class ObjectControl : MonoBehaviour {
     public GameObject splash_effect;
     public GameObject splash_flat_effect;
 
+    public AudioClip cut_sound;
+
     private bool isCut = false;
 
     public void OnCut()
@@ -25,7 +27,8 @@ public class ObjectControl : MonoBehaviour {
         if (gameObject.name.Contains("Bomb"))
         {
             Instantiate<GameObject>(splash_effect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            //stop boom sound
+            GetComponent<AudioSource>().Stop();
         }
         else
         {
@@ -37,12 +40,11 @@ public class ObjectControl : MonoBehaviour {
             //generate effects
             Instantiate<GameObject>(splash_effect, transform.position, Quaternion.identity);
             Instantiate<GameObject>(splash_flat_effect, transform.position, Quaternion.identity);
-
-            //destory current ojbects
-            Destroy(gameObject);
-
         }
 
+        //destory current ojbects
+        Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(cut_sound,transform.position);
         isCut = true;
     }
 }

@@ -79,11 +79,12 @@ public class Spawner : MonoBehaviour {
 
         if (isFruit)
         {
-             go = Instantiate<GameObject>(Fruits[fruitsInex], new Vector3(x, y, z), Random.rotation);
+            go = Instantiate<GameObject>(Fruits[fruitsInex], new Vector3(x, y, z), Random.rotation);
+            
         }
         else
         {
-             go = Instantiate<GameObject>(Bomb, new Vector3(x, y, z), Random.rotation);
+            go = Instantiate<GameObject>(Bomb, new Vector3(x, y, z), Random.rotation);
         }   
         //the velocity of fruits
         Vector3 velocity = new Vector3(-x * Random.Range(0.2f, 0.6f), -Physics.gravity.y * Random.Range(1.0f, 1.2f), 0);

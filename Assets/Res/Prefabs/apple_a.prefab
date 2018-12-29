@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23685044405729488}
   - component: {fileID: 54838855941782710}
   - component: {fileID: 135113851380488892}
+  - component: {fileID: 114515986252947646}
   m_Layer: 0
   m_Name: apple_a
   m_TagString: Untagged
@@ -100,6 +101,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114515986252947646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242715998117530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3caf5bab3f46f499a938ad7ae44032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  half_fruits:
+  - {fileID: 1550185867689336, guid: 961a42e6f5830154ebbc9de4a7ec547c, type: 2}
+  - {fileID: 1550185867689336, guid: 961a42e6f5830154ebbc9de4a7ec547c, type: 2}
+  splash_effect: {fileID: 100000, guid: 20c0517c0bb86294ba4420289cfefe07, type: 2}
+  splash_flat_effect: {fileID: 100000, guid: 18ea054d084b91b468b8d4bf5c8f5cd7, type: 2}
+  cut_sound: {fileID: 8300000, guid: 3dccd74501c15bb489bc8b98424cdfc6, type: 3}
 --- !u!135 &135113851380488892
 SphereCollider:
   m_ObjectHideFlags: 1

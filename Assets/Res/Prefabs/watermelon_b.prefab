@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33423381537224430}
   - component: {fileID: 23009267451556616}
   - component: {fileID: 135445796148035332}
+  - component: {fileID: 54404279341103720}
+  - component: {fileID: 114187559111580178}
   m_Layer: 0
   m_Name: watermelon_b
   m_TagString: Untagged
@@ -84,6 +86,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1811175439361834}
   m_Mesh: {fileID: 4300002, guid: 22adc2a9d7f5bad44b4da97250284c25, type: 3}
+--- !u!54 &54404279341103720
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1811175439361834}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &114187559111580178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1811175439361834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6eb071177c61d74c9aec45611fc21de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destoryTime: 2
 --- !u!135 &135445796148035332
 SphereCollider:
   m_ObjectHideFlags: 1
